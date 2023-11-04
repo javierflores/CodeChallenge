@@ -9,15 +9,15 @@
 
 ## Results 
 ### LWC
-![Alt text](image.png)
-![Alt text](image-1.png)
-![Alt text](image-2.png)
+![Alt text](screenshots/image.png)
+![Alt text](screenshots/image-1.png)
+![Alt text](screenshots/image-2.png)
 
 ### Flow
-![Alt text](image-3.png)
-![Alt text](image-4.png)
-![Alt text](image-5.png)
-![Alt text](image-6.png)
+![Alt text](screenshots/image-3.png)
+![Alt text](screenshots/image-4.png)
+![Alt text](screenshots/image-5.png)
+![Alt text](screenshots/image-6.png)
 
 Use Case 2:
 1)	Create a custom field called “Risk” with values as High, Low, Medium.
