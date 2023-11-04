@@ -1,0 +1,74 @@
+<template>
+    <c-info-box></c-info-box>
+
+    <lightning-card title="Zip Code Information" icon-name="custom:custom14">
+        <div class="slds-grid">
+            <div class="slds-col slds-size_2-of-3 slds-p-around_medium">
+                <div class="slds-box">
+                    <div class="slds-m-around_medium">
+                        <lightning-input label="Country" value={country} onchange={handleCountryChange}></lightning-input>
+                        <lightning-input label="Zip Code" value={zipCode} onchange={handleZipChange}></lightning-input>
+                        <lightning-button label="Search" onclick={search} class="slds-m-top_medium"></lightning-button>
+                    </div>
+            
+                    <template if:true={zipCodeInfo}>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Post Code">Post Code</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Country">Country</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Country Abbreviation">Country Abbreviation</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="slds-hint-parent">
+                                    <td data-label="Post Code">
+                                        <div class="slds-truncate" title={zipCodeInfo.post_Code}>{zipCodeInfo.post_Code}</div>
+                                    </td>
+                                    <td data-label="Country">
+                                        <div class="slds-truncate" title={zipCodeInfo.country}>{zipCodeInfo.country}</div>
+                                    </td>
+                                    <td data-label="Country Abbreviation">
+                                        <div class="slds-truncate" title={zipCodeInfo.country_abbreviation}>{zipCodeInfo.country_abbreviation}</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </template>
+                </div>
+            </div>
+
+            <div class="slds-col slds-size_1-of-3 slds-p-around_medium">
+                <div class="slds-box">
+                    <c-zip-code-table zip-code-data={usZipCodes}></c-zip-code-table>
+                </div>
+            </div>
+        </div>
+
+        
+        <template if:true={error}>
+            <div class="slds-notify_container">
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                    <span class="slds-assistive-text">Error</span>
+                    <lightning-icon icon-name="utility:error" size="x-small" alternative-text="Error" class="slds-m-right_x-small"></lightning-icon>
+                    <h2>{error}</h2>
+                    <div class="slds-notify__close">
+                        <lightning-button-icon icon-name="utility:close"
+                                               alternative-text="Close"
+                                               title="Close"
+                                               size="small"
+                                               variant="bare-inverse"
+                                               onclick={clearError}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </lightning-card>
+</template>

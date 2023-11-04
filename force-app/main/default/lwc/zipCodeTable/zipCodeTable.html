@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="ZIP Code Results" icon-name="custom:custom63">
+        <template if:true={zipCodeData}>
+            <div class="slds-m-around_medium">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Post Code">Post Code</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Country">Country</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Country Abbreviation">Country Abbreviation</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={zipCodeData} for:item="result">
+                            <tr key={result.post_Code} class="slds-hint-parent">
+                                <td data-label="Post Code">
+                                    <div class="slds-truncate" title={result.post_Code}>{result.post_Code}</div>
+                                </td>
+                                <td data-label="Country">
+                                    <div class="slds-truncate" title={result.country}>{result.country}</div>
+                                </td>
+                                <td data-label="Country Abbreviation">
+                                    <div class="slds-truncate" title={result.country_abbreviation}>
+                                        {result.country_abbreviation}
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </template>
+        <template if:false={zipCodeData}>
+            <p class="slds-m-around_medium">No results to display.</p>
+        </template>
+    </lightning-card>
+</template>
