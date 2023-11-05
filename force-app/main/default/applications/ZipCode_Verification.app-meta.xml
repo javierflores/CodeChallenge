@@ -16,7 +16,8 @@
     <tabs>Zip_Codes_Verification</tabs>
     <tabs>Zip_Code_Verification_Flow</tabs>
     <tabs>ZIP_Code__c</tabs>
-    <tabs>Monitor__c</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Case</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>ZipCode_Verification_UtilityBar</utilityBar>
 </CustomApplication>
