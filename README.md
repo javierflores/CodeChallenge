@@ -1,7 +1,7 @@
 # Salesforce DX Project - Javier Flores - Code Challenge
 ## Additional Indications:
 **This code can be installed in a scratch org, it contains:**
-1. Custom App named "Code Challenge" with necessary tabs and other metadata needed (layouts, tabs, flow, LWC, Apex, etc).
+1. Custom App named "Code Challenge" with necessary tabs and other metadata needed (layouts, tabs, flow, LWC, Apex, etc).  
 ![Alt text](screenshots/app.png)
 2. Assign "Named Credential" permission set to the user would be testing this app.
 
@@ -25,7 +25,7 @@
 ![Alt text](screenshots/image-3.png)
 ![Alt text](screenshots/image-4.png)
 
-Use Case 2:
+## Use Case 2:
 1)	Create a custom field called “Risk” with values as High, Low, Medium.
     - Assumtion: Account will have this new field.
 2)	When the value “High” is selected, trigger a platform event.
@@ -41,6 +41,11 @@ Important Considerations
 1)	All apex code should have proper error handling, should follow best practices.
 2)	Code should be performant.
 
-# Additional improvements
-1. UI interface improvement.
-2. Handle duplicates queries.
+# Additional comments and recommendations
+## Recommendations
+1. UI interface improvements based on the SFDC design system.
+2. Handle duplicates queries when consult the same zip code.
+
+## Comments
+1. Test apex classes not included.
+2. JS test functions not included (JEST).

@@ -18,7 +18,8 @@ public with sharing class CasePETriggerUtils {
             try {
                 insert casesToCreate;
             } catch (DmlException e) {
-                // create records on Log__c object or send alert to admins
+                // I'm leaving this empty, but the recommendations is log or alert on these errors, example:
+                // create records on Log__c object or send alert to admins, depends on company strategy
             }
         }
     }

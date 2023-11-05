@@ -21,7 +21,7 @@ public with sharing class AccountTriggerUtils {
             
             for (Database.SaveResult result : results) {
                 if (!result.isSuccess()) {
-                    // create records on Log__c object or send alert to admins
+                    // create records on Log__c object or send alert to admins (depends on company strategy)
                 }
             }
         }

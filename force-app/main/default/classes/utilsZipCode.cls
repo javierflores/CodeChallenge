@@ -1,5 +1,5 @@
 public with sharing class utilsZipCode {
-    public static final String API_ENDPOINT = 'https://api.zippopotam.us'; //this should be moved to a custom settign or CMT
+    public static final String API_ENDPOINT = 'https://api.zippopotam.us'; //this should be moved to a custom settign or CMT or use named credential
     public static final String SUCCESS_MESSAGE = 'Success';
     public static final String GET_METHOD = 'GET';
     public static final Integer STATUS_CODE_200 = 200;
